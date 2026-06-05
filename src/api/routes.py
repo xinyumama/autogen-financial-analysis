@@ -260,8 +260,8 @@ async def get_system_metrics():
 @api_routes.post("/quick-analysis")
 async def quick_analysis(
     symbol: str,
-    analysis_type: AnalysisType = AnalysisType.QUICK,
-    background_tasks: BackgroundTasks
+    background_tasks: BackgroundTasks,
+    analysis_type: AnalysisType = AnalysisType.QUICK
 ):
     """快速分析（同步返回）"""
     try:
